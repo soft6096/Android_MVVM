@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="worksBean" type="com.capsule.mvvm.bean.WorksBean"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drawee_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1.0"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{worksBean.name}"/>
+    </LinearLayout>
+
+</layout>
